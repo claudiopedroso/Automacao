@@ -1,0 +1,5 @@
+
+# Registration Screen - https://app-staging.rdstation.com.br/cadastro
+System should capture address from zip code
+After failure to create account, system removes info from unexpected fields (name, job title)
+When trying to register as a natural/legal person, I fill all required fields, click create account but get an error message. No field is highlighted
