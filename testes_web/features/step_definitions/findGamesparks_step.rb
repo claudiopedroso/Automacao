@@ -4,6 +4,7 @@ end
 
 Then(/^I will search for "(.*?)"$/) do |searchText|
     fill_in 'lst-ib', :with => searchText
+    click_button 'Pesquisa Google'
 end
 
 Then(/^I should see "(.*?)"$/) do |expectedText|
