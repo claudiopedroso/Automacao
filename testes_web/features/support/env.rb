@@ -2,8 +2,7 @@ require 'capybara/cucumber'
 require 'capybara'
 require 'capybara/dsl'
 require 'selenium-webdriver'
-require 'nokogiri'
-require 'open-uri'
+require 'site_prism'
 
 
 Capybara.default_driver = :selenium
