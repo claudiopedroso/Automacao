@@ -1,5 +1,59 @@
+RD Station Manual Report
 
-# Registration Screen - https://app-staging.rdstation.com.br/cadastro
-System should capture address from zip code
-After failure to create account, system removes info from unexpected fields (name, job title)
-When trying to register as a natural/legal person, I fill all required fields, click create account but get an error message. No field is highlighted
+1. Purpose of this document
+  This report explains the various activities performed in order to understand the basic functions and workflows of RD Station.
+
+2. Application Overview
+  RD Station is an inbound marketing automation system, available as a service on http://www.rdstation.com/. 
+  For the purpose of this document, a staging environment was used, available on https://app-staging.rdstation.com.br/
+  The system is organized in five verticals: atracting, converting, relating, selling and analysing.
+
+3. Testing Scope
+  In Scope
+    Exploratory and Functional Testing of the following modules:
+
+
+
+
+  Out of Scope
+    Performance Testing (Load, Stress, Endurance, Scalability, etc.)
+    Security Testing
+
+
+  Items not tested
+    All actions that included publishing to social media or sending e-mails, as requested by Ms. Bárbara Cabral.
+
+4. Types of testing performed
+  Manual Functional Testing of all the modules
+  Automated Funcional Testing of the XXXX module
+
+
+5. Test Environment & Tools
+  Windows 10 Pro
+  Google Chrome 60.0.3112.90 64 bits - Manual testing
+  Firefox XXXX - Automated testing
+  Application url - https://app-staging.rdstation.com.br/
+  Tests automated using Ruby and Cucumber. For more information, check /features/README.MD  
+
+6. Tests executed
+  Test scenarios executed manually
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+7. Bugs and Recommendations  
+
+7.1 Registration Screen - https://app-staging.rdstation.com.br/cadastro
+7.1.1 Recommendation: When the customer fills the zip code field, the page could automatically fill Street, City and State fields.
+7.1.2 Recommendation: After failing to create an account, the page removes the info typed in the name and job title fields. It could keep the information in those fields, that hold no sensitive data.
+7.1.3 Bug: When trying to register as a natural/legal person, when I fill all required fields (/screenshots/Registration_page_filled.png) 
+and click create account, I get an error message (/screenshots/registration_error.png). No field is highlighted. Expected Result: Account creation successful

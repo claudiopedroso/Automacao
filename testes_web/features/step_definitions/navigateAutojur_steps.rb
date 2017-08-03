@@ -8,6 +8,6 @@ When(/^I fill the username information$/) do
 end
 
 Then(/^I should see it on screen$/) do
-  expect.(page).to have_content('claudio.pedroso')
+  page.should have_field('login-form:username', :text => 'claudio.pedroso')
 end
 
