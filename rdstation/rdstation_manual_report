@@ -4,16 +4,13 @@ RD Station Manual Report
   This report explains the various activities performed in order to understand the basic functions and workflows of RD Station.
 
 2. Application Overview
-  RD Station is an inbound marketing automation system, available as a service on http://www.rdstation.com/.
+  RD Station is an inbound marketing management and automation system, available as a service on http://www.rdstation.com/.
   For the purpose of this document, a staging environment was used, available on https://app-staging.rdstation.com.br/
-  The system is organized in four verticals: Atrair, Converter, Relacionar, Analisar
-  From the system, the user can post to and monitor social media accounts, manage SEO, hire Facebook Ads,
-  create and manage landing pages, forms, automate lead segmentation, e-mail marketing and build reports on all activity related
-  to the company online presence.
+  RD Station enables the user to post to and monitor social media accounts, manage SEO, hire Facebook Ads, create and manage landing pages, forms, blogs, automate lead segmentation, e-mail marketing and build reports on activities related to the company online presence.
 
 3. Testing Scope
   In Scope
-    Exploratory and Functional Testing of the following modules: Registration screen, Login screen, Dashboard, Atrair, Converter, Relacionar, Analisar.
+    Exploratory and Functional Testing of the following modules: Registration page, Login page, Dashboard, Atrair, Converter, Relacionar, Analisar.
 
   Out of Scope
     Performance Testing (Load, Stress, Endurance, Scalability, etc.)
@@ -21,12 +18,12 @@ RD Station Manual Report
 
   Items not tested
     All actions that included publishing to social media or sending e-mails, as requested by Ms. Bárbara Cabral.
-    Atrair > Facebook Ads page
-    Dashboard > "Páginas Mais Acessadas deste Mês" section
+    Atrair > Facebook Ads page, as requested on line 22
+    Dashboard > "Páginas Mais Acessadas deste Mês" section, as requested on line 22
 
 4. Types of testing performed
   Manual Functional Testing of all the modules
-  Automated Functional Testing of the Leads Base module
+  Automated Functional Testing of the "Base de Leads" module
 
 5. Test Environment & Tools
   Windows 10 Pro
@@ -40,14 +37,18 @@ RD Station Manual Report
   Time spent:
   Wed, 17/08/02 - 1:30h - Trying to create account and reading Ship It! blog QA articles
   Thu, 17/08/03 - 2:30h - Test environment setup and system overview.
-
-  First, I took my time to acknowledge the system and imagine some test scenarios, listed bellow.
-  Those are not meant to be exhausting, neither should be taken as a full test suite.
+  Fri, 17/08/04 - 
+  Sat, 17/08/05 - 
+  
+  First, I took my time to acknowledge the system, imagine and run some test scenarios, listed bellow.
+  Those are not meant to be exhaustive, neither should be taken as a full test suite.
+  The happy path should be covered in all features, including adding, editing and removing information, when applicable.
+    
   Possible test scenarios
-  System-wide
+  System-wide (executed in every page and modal)
     Checking for broken hyperlinks, buttons or options
     Check if layout meets specifications
-    Check fields character limit, acceptance of special characters
+    Test fields character limit, acceptance of special characters
 
   Login Screen:
     Login with valid credentials
@@ -56,51 +57,54 @@ RD Station Manual Report
     Login without password
     Simple SQL Injection on password field
 
-  Dashboard page:
+  Dashboard page
 
     "Funil de Vendas" section
-      Changing the report month for all tabs (up to Jan/6611 b.c.)
+      Changing the report month for all tabs (from Jan/6611 b.c. to Aug/2017)
       Selecting which tabs should be displayed
-      Clicking on an empty tab
+      Trying to open an empty tab
       Changing the goal for a tab and saving it
-      Changing the goal for a tab, but cancel it
-      Changing the goal and clicking outside the "Sales Funnel Goals" modal
+      Changing the goal for a tab, but canceling it
+      Changing the goal for a tab and clicking outside the "Metas do Funil de Vendas" modal
       Checking for broken hyperlinks both in the section and the modals
 
     "Últimas Conversões de Lead" section
-      Testing the "flow control" buttons
-      Adding a lead manually and checking if it appears on "50 Last Leads Conversion"
-      Deleting a lead and checking if it still appears on "50 Last Leads Conversion"
+      Testing the left/right flow control buttons
+      Adding a lead manually and checking if it appears on "50 Últimas Conversões de Lead"
+      Deleting a lead and checking if it appears on "50 Últimas Conversões de Lead"
 
     "Última Landing Page" section
-      Creating and publishing a new landing page and checking if it appears on "Last Landing Page" section
-      Unpublishing the last landing page published and checking if it appears on "Last Landing Page" section
-      Republishing an unpublished last landing page created and checking if it appears on "Last Landing Page" section
+      Creating and publishing a new landing page and checking if it appears on "Última Landing Page" section
+      Unpublishing the last landing page published and checking if it appears on "Última Landing Page" section
+      Republishing an unpublished last landing page created and checking if it appears on "Última Landing Page" section
 
     "Última campanha de e-mail" section
       Checking for broken hyperlinks, buttons or options
 
     "Atrair > Postagens em Mídias Sociais" page
       Creating a new post schedule
-      Filtering posts by social media
+      Filtering posting schedules by social media
       Changing calendar view (week/month)
       Removing a scheduled post
+      Selecting different weeks/months
+      Returning to current date
 
     "Atrair > Painel de Palavras-Chave"
       Adding a new keyword
       Getting blog title ideas from a keyword
       Removing a keyword
       Ordering keywords by different parameters
-      Changing the keywords relevance
+      Changing the keyword relevance
 
     "Atrair > Otimização de SEO"
-      Creating a report for a existing website
-      Creating a report for a website that requires redirecting
+      Create a report for a existing website
+      Create a report for a website that requires redirecting
+      Create a report for a non-existent website
       Trying to generate a report without keyword
       Trying to generate a report without website address
 
     "Atrair > Ferramentas para Blog"
-      Creating a blog title suggestion based on given keyword
+      Creating a blog title suggestion based on a keyword
       Request a blog
 
     "Converter > Landing Pages"
@@ -155,17 +159,17 @@ RD Station Manual Report
 
 7. Bugs and Recommendations
 System-wide
-  Recommendation: Standardize popup notification style. In some screens the system uses a custom one (red background and red font), in others it uses the browser default.
+  Recommendation: Standardize pop-up notification style. In some screens the system uses a custom one (red background and red font), in others it uses the browser default.
 
-Registration Screen - https://app-staging.rdstation.com.br/cadastro
+Registration page - https://app-staging.rdstation.com.br/cadastro
   Recommendation: When the customer fills the zip code field, the page could automatically fill Street, City and State fields.
   Recommendation: After failing to create an account, the page removes the info typed in the name and job title fields. It could keep the information in those fields, that hold no sensitive data.
   Bug: When trying to register as a natural/legal person, when I fill all required fields (/screenshots/Registration_page_filled.png)
 and click create account, I get an error message (/screenshots/registration_error.png). No field is highlighted. Expected Result: Account creation successful
 
-Attract > Keywords page - https://app-staging.rdstation.com.br/palavras-chave
-  Recommendation: Change the "Export to Excel" button name to "Export to csv" or add the option to export to xls/xlsx
+"Atrair > Painel de Palavras-Chave" - https://app-staging.rdstation.com.br/palavras-chave
+  Recommendation: Change the "Export to Excel" button label to "Export to csv" or add the option to export to xls/xlsx
 
-Attract > Blog tools - https://app-staging.rdstation.com.br/blog
+"Atrair > Ferramentas para Blog" - https://app-staging.rdstation.com.br/blog
   Bug: The "Request Blog" button hyperlink is broken - Error 404 (/screenshots/blog_quotation_404.png)
-  Bug: Generating a suggestion with long words without spaces breaks the page layout (/screenshots/line_break.png)
+  Bug: Generating a suggestion with long words without spaces breaks the page layout (/screenshots/line_break.png). Expected Result Suggestion: word is wrapped automatically.

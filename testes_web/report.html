@@ -1,0 +1,28 @@
+Feature: Find the Crossfit Games Website
+
+  Scenario: Search for the website          # features/findCrossfitgames.feature:3
+    Given I am on the Google homepage       # features/step_definitions/findCrossfitgames_step.rb:1
+    Then I will search for "CrossFit Games" # features/step_definitions/findCrossfitgames_step.rb:5
+    Then I should see "Leaderboard"         # features/step_definitions/findCrossfitgames_step.rb:10
+      expected to find text "Leaderboard" in "Fazer login × Vem sempre aqui? Faça do Google sua página inicial. Claro TodasVídeosNotíciasShoppingImagensMais Configurações Ferramentas Aproximadamente 1.260.000 resultados (0,40 segundos) Resultados da pesquisa CrossFit® - YouTube https://www.youtube.com/user/CrossFitHQ Traduzir esta página 2016 Affiliate Cup champion team member James Hobart knows what it takes for a team to win at the CrossFit Games. Update Show host Sean Woodland ... ‎Videos · ‎Playlists · ‎Channels · ‎About The CrossFit Games: Individual Finals - YouTube ▶ 3:03:14 https://www.youtube.com/watch?v=91TtDEfpzvE 27 de jul de 2014 - Vídeo enviado por CrossFit® The CrossFit Games -- (http://games.crossfit.com) The CrossFit Games® - The Sport of Fitness™ The Fittest On ... CrossFit® - YouTube https://www.youtube.com/user/CrossFitHQ/videos Traduzir esta página CrossFit® is the principal strength and conditioning program for many police ... Road to the Games 17.07: Davidsdottir/Toomey/Sigmundsdottir/Briggs - Duration: ... 2017 CrossFit Games - YouTube https://www.youtube.com/playlist?list...WYeijYJNlti Traduzir esta página CrossFit.com ... 2017 CrossFit Games. CrossFit®; 162 videos; 45,578 views; Updated 3 days ago. Play all. Share ... by CrossFit® ... by CrossFit® ... by CrossFit®. The CrossFit Games: 2016 Highlights - YouTube ▶ 4:00 https://www.youtube.com/watch?v=En1RBBzQZoA 13 de set de 2016 - Vídeo enviado por CrossFit® Highlights from the 2016 Reebok CrossFit Games. The CrossFit Games -- (http://games.crossfit.com) The ... THE 2017 CROSSFIT GAMES - YouTube ▶ 15:15 https://www.youtube.com/watch?v=kDC0szppP3I 23 de jul de 2017 - Vídeo enviado por TeamRICHEY My Predictions for the 2017 Crossfit games - The new category - Who we're excited to see - Josh bridges ... The CrossFit Games - Individual Murph - YouTube ▶ 2:31:13 https://www.youtube.com/watch?v=Q6RP73WMbmA 22 de jul de 2016 - Vídeo enviado por CrossFit® For full event details and descriptions click here: http://games.crossfit.com/workouts/games The CrossFit ... CROSSFIT GAMES 2017 - YouTube ▶ 3:12:08 https://www.youtube.com/watch?v=cYIf8MBQmlo 16 horas atrás - Vídeo enviado por Sport Channel Your browser does not currently recognize any of the video formats available. Click here to visit our frequently ... CrossFit Games YouTube ▶ 2:25 https://www.youtube.com/watch?v=N11o6srWc1s 7 dias atrás - Vídeo enviado por CrossFit® Pat Sherwood, Tommy Marquez, Sean Woodland and Rory McKernan team up to explain how to watch the ... The CrossFit Games - Men's Ranch Deadlift Ladder - YouTube ▶ 4:03 https://www.youtube.com/watch?v=rp0iI7GP3OU 21 de jul de 2016 - Vídeo enviado por CrossFit® Coverage of the 2016 Reebok CrossFit Games Men's Ranch Deadlift Ladder at the Ranch, in Aromas ... Pesquisas relacionadas a crossfit games youtube crossfit games open 2017 crossfit games brasil crossfit games 2016 results crossfit games 2017 crossfit games 2017 ao vivo crossfit open 2017 crossfire games crossfit videos 1 2 3 4 5 6 7 8 9 10 Mais Trindade, Florianópolis - SC - Do seu endereço IP - Usar local preciso - Saiba mais Ajuda Enviar feedback Privacidade Termos" (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/findCrossfitgames_step.rb:11:in `/^I should see "(.*?)"$/'
+      features/findCrossfitgames.feature:6:in `Then I should see "Leaderboard"'
+    Then I will click the Leaderboard link  # features/step_definitions/findCrossfitgames_step.rb:14
+
+Feature: Navigate to Autojur
+
+  Scenario: Navigate to Autojur and fill login # features/navigateAutojur.feature:3
+    Given I am on the Autojur homepage         # features/step_definitions/navigateAutojur_steps.rb:1
+    When I fill the username information       # features/step_definitions/navigateAutojur_steps.rb:6
+    Then I should see it on screen             # features/step_definitions/navigateAutojur_steps.rb:10
+      expected to find field "login-form:username" with text "claudio.pedroso" but there were no matches. Also found "", which matched the selector but not all filters. (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/navigateAutojur_steps.rb:11:in `/^I should see it on screen$/'
+      features/navigateAutojur.feature:6:in `Then I should see it on screen'
+
+Failing Scenarios:
+cucumber features/findCrossfitgames.feature:3 # Scenario: Search for the website
+cucumber features/navigateAutojur.feature:3 # Scenario: Navigate to Autojur and fill login
+
+2 scenarios (2 failed)
+7 steps (2 failed, 1 skipped, 4 passed)
+0m28.295s
