@@ -17,4 +17,6 @@ QA Engineer Candidate - Cláudio Pedroso, CTFL
   Navigate to ~/Automacao/rdstation, install bundler (gem install bundler) and run (bundle install)
 
 3. Running the tests
+
+
   At the /rdstation folder, run cucumber -f html. At the end of the tests, a report will be available at the project folder.
