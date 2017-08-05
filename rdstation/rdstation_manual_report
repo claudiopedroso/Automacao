@@ -20,9 +20,13 @@ RD Station Manual Report
     All actions that included publishing to social media or sending e-mails, as requested by Ms. Bárbara Cabral.
     Atrair > Facebook Ads page, as requested on line 22
     Dashboard > "Páginas Mais Acessadas deste Mês" section, as requested on line 22
+    Relacionar > Lead Scoring
+    Relacionar > Lead Tracking
+    All subpages on "Analisar" vertical
+    All account configuration pages
 
 4. Types of testing performed
-  Manual Functional Testing of all the modules
+  Manual Functional Testing of all other modules
   Automated Functional Testing of the "Base de Leads" module
 
 5. Test Environment & Tools
@@ -37,13 +41,14 @@ RD Station Manual Report
   Time spent:
   Wed, 17/08/02 - 1:30h - Trying to create account and reading Ship It! blog QA articles
   Thu, 17/08/03 - 2:30h - Test environment setup and system overview.
-  Fri, 17/08/04 - 
-  Sat, 17/08/05 - 
-  
+  Fri, 17/08/04 - 4h - Continuing system overview and writing automation scenarios
+  Sat, 17/08/05 - 6h - Automating "Base de Leads" scenarios
+
   First, I took my time to acknowledge the system, imagine and run some test scenarios, listed bellow.
   Those are not meant to be exhaustive, neither should be taken as a full test suite.
   The happy path should be covered in all features, including adding, editing and removing information, when applicable.
-    
+  Since I've only discovered Page Objects last Saturday, I only feel comfortable using it in simple scenarios. Nevertheless, I'm currently practicing with SitePrism and I'm loving it.
+
   Possible test scenarios
   System-wide (executed in every page and modal)
     Checking for broken hyperlinks, buttons or options
@@ -154,8 +159,54 @@ RD Station Manual Report
       Removing a custom field used by a published form
 
     "Relacionar > Monitoramento de Mídias Sociais"
+      Connecting a social media account
+      Adding a expression to monitor
+      Editing an added expression
+      Responding to mentions
+      Filtering important posts
+      Opening original post
 
+    "Relacionar > Base de Leads"
+      Importing leads
+      Adding leads manually
+      Filtering Leads
+      Searching for leads
+      Ordering leads by
+      Adding tags to a lead
+      Removing tags from a lead
+      Viewing a lead full profile page
+      Exporting leads table
+      Adding a company
+      Searching for a company
+      Editing a company
+      Listing imported files
+      Editing imported information
 
+    "Relacionar > Segmentação de Leads"
+      Creating a lead segmentation rule
+      View leads into a segmentation
+      Editing segmentation rule
+      Exporting conversions
+      Creating email for a segmentation
+      Deleting leads
+      Searching for a segmentation
+
+    "Relacionar > Automação de Marketing"
+      Create workflow
+      Manage workflow performance
+      Editing a workflow
+      Deleting a workflow
+      Deactivating a workflow
+      Monitor a lead response to the campaign in real time
+
+    "Relacionar > Email"
+      Create email campaign
+      Schedule email
+      Save draft email messages
+      Create email template
+      Editing an email template
+      Sending emails
+      Monitor email campaign performance
 
 7. Bugs and Recommendations
 System-wide
